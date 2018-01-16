@@ -1,0 +1,230 @@
+% Author: Vitaly Parnas
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage[paperheight=17in,paperwidth=17in,margin=1in,heightrounded]{geometry}
+\usepackage{verbatim}
+\graphicspath{ {images/} }
+
+% Below needed for the russian characters
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{comment}
+:Title: Murakami, Chronicles of the Winding Bird mind map
+:Tags: Manual, Mindmap
+
+| Author: Vitaly Parnas
+| Source: Haruki Murakami - Chronicles of the Winding Bird
+| Символы: Колодец, бейсбольная бита, пятно на щеке, крик заводной птицы, потеря чувств (внутренняя и наружная): руки/слуха/разговора
+\end{comment}
+
+%\includegraphics[scale=0.40]{image}
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept,
+    concept color=black,text=white,
+    level 1/.append style={level distance=12cm,sibling angle=36,font=\large},
+    level 2/.append style={level distance=3cm,sibling angle=72},
+    level 3/.append style={level distance=2cm,sibling angle=60},
+    level 4/.append style={level distance=2cm,sibling angle=45},
+    nucleus/.style= {concept, font=\huge\bfseries},
+    ]
+    \node [nucleus] {Заводная Птица\\\includegraphics[width=2cm,height=2cm,keepaspectratio]{nucleus}}
+    child[concept color=green!40!white,text=black,level distance=11cm] { node {Тору Окада}
+        child { node {Дом Миаваки} 
+            child { node {Колодец} }
+            child { node {Резиденция-Клиенты} 
+                child { node {Лечительская Должность} }
+                child { node {Мускатный Орех} }
+                child { node {Корица} }
+            }
+            child { node {Проклята Земля} }
+        }
+        child { node {Отель} 
+            child { node {Параллельный Мир} }
+            child { node {Телестудия} 
+                child { node {Набору Ватая} }
+            }
+            child { node {Номер 208} 
+                child { node {Телефонная \mbox{Женщина}} }
+                child { node {Крита Кано} }
+                child { node {Кумико} }
+                child { node {Борьба} }
+            }
+            child { node {Человек без Лица} }
+        }
+        child { node {Поиск Себя} 
+            child { node {Кумико Ушла} }
+            child { node {Колодец - 3 дня} 
+                child { node {Бита} }
+                child { node {Вода} }
+                child { node {Щека-Пятно} }
+            }
+            child { node {Кот} 
+                child { node {'Набора Ватая'} }
+                child { node {Возврат} 
+                    child { node {Переименован 'Макрель'} }
+                    child { node {Другой Хвост} }
+                }
+            }
+            child { node {Брожение по Токио} }
+            child { node {Крита Кано} }
+        }
+        child { node {Саппоро-Приключение} 
+            child { node {Фокусник/Музыкант} }
+            child { node {Преследование} }
+            child { node {Драка/Бита} }
+        }
+    }
+    child[concept color=blue!50!white,text=black,level distance=5cm] { node {Ветеринар}
+        child { node {Американская Водолодка} }
+        child { node {Щека-Пятно} }
+        child { node {Синьцзин} 
+            child { node {Зоопарк} }
+            child { node {Смерть \mbox{Китайцам}} 
+                child { node {Расстрел} }
+                child { node {Бита} }
+                child { node {Мертвый \mbox{Оживился}} }
+                child { node {Яма} }
+            }
+            child { node {Расстрел \mbox{Животных}} }
+            child { node {Лейтенант} }
+        }
+        child { node {Судьба Руководит} }
+    }
+    child[concept color=red!50!white,text=black,level distance=13cm] { node {Мускатный Орех}
+        child { node {Отец - Ветеринар} }
+        child { node {Корица - Сын} 
+            child { node {Идеальный \mbox{Гардероб}} }
+            child { node {Не \mbox{Разговаривает}} }
+            child { node {Полный \mbox{Контроль}} 
+                child { node {Истинная \mbox{Чистота}} }
+                child { node {Пианино} }
+                child { node {Машины} }
+                child { node {Компьютерная \mbox{Система}} }
+            }
+            child { node {Язык Жестов} }
+        }
+        child { node {Карьера} 
+            child { node {Мода} }
+            child { node {Невыносимость \mbox{Не красоты}} }
+            child { node {Без \mbox{Компромиссов}} }
+            child { node {Лечительница} }
+        }
+        child { node {Откровенность} }
+    }
+    child[concept color=blue!30!white,text=black] { node {Mэй Касахара}
+        child { node {Напротив Дома Миаваки} }
+        child { node {Фабрика Париков} 
+            child { node {Работа-Структура} }
+            child { node {Письма до Тору} }
+            child { node {Бессонница} }
+        }
+        child { node {Мотоциклисткая Авария} 
+            child { node {Парень Умер} }
+            child { node {Год от Учебы} }
+            child { node {Потеря Чувств} }
+        }
+        child { node {Фирма Париков} 
+            child { node {С Тору Окада} }
+            child { node {Классификация Лысины} }
+        }
+    }
+    child[concept color=purple!40!white,text=black,level distance=7cm] { node {Мальта Кано}
+        child { node {Поиск Кота} }
+        child { node {Прорицательница} }
+        child { node {Красная Шляпа} }
+        child { node {Совершенство на Мальте} }
+        child { node {Анализ Воды} }
+    }
+    child[concept color=purple!60!white,text=black,level distance=10cm] { node {Крита Кано}
+        child { node {Обесчещена Наборой} 
+            child { node {Возврат Чувств} }
+            child { node {Уехала на Крит} }
+        }
+        child { node {Неудачное \mbox{Самоубийство}} 
+            child { node {Потеря Чувств} }
+            child { node {Проституция} 
+                child { node {Физическая} }
+                child { node {Во Сне} }
+                child { node {Якуза} }
+            }
+            child { node {Долги} }
+        }
+        child { node {Детство - Боли} }
+    }
+    child[concept color=green!40!white,text=black,level distance=9cm] { node {Кумико}
+        child { node {Детство} 
+            child { node {Сестра - \mbox{Самоубийство}} }
+            child { node {Жизнь с \mbox{Бабушкой}} 
+                child { node {3-6 лет} }
+                child { node {Трудный \mbox{Возврат}} }
+            }
+            child { node {Брат - Набору Ватая} }
+        }
+        child { node {Жена Тору} }
+    }
+    child[concept color=brown!50!white,text=black,level distance=11cm] { node {Набору Ватая}
+        child { node {Карьера} 
+            child { node {Опубликовал Книгу} }
+            child { node {Телевизионный \mbox{Интеллектуал}} }
+            child { node {Политика} }
+        }
+        child { node {Изнасиловал Сестру} }
+        child { node {Усикава - Помощник} 
+            child { node {Проникает в Дух} }
+            child { node {Ужасный Гардероб} }
+            child { node {Много \mbox{Разговаривает}} }
+            child { node {Облик Пса} }
+        }
+        child { node {Инфаркт} }
+        child { node {Ненависть с Тору} }
+    }
+    child[concept color=yellow!60!white,text=black,level distance=11cm] { node {Манчжурия}
+        child { node {Спецзадача} 
+            child { node {Монголы Поймали} }
+            child { node {Борис Грибов} }
+            child { node {Ямомото - \mbox{Руководитель}} 
+                child { node {Содрали кожу} }
+            }
+        }
+        child { node {Хонда-Сан} 
+            child { node {Прорицатель/Пророк} 
+                child { node {Поток Воды} }
+                child { node {Мамия - Жить Долго} }
+            }
+            child { node {Намонхон} 
+                child { node {Советские Танки} }
+                child { node {Без Воды} }
+                child { node {Потеря Слуха} }
+            }
+        }
+        child { node {Лейтенант Мамия} 
+            child { node {Монголы - Колодец} 
+                child { node {Потеря Себя} }
+                child { node {Спасен \mbox{Хондой}} }
+            }
+            child { node {Потеря Руки} }
+        }
+    }
+    child[concept color=gray!70!white,text=black,level distance=14cm] { node {Сибирь} 
+        child { node {Лейтенант Мамия} 
+            child { node {Владеет Русским} }
+            child { node {Доверие Грибовo} }
+            child { node {Проклятие \mbox{Грибовым}} }
+        }
+        child { node {Борис Грибов} 
+            child { node {'Сотрудник' \mbox{Монголов}} }
+            child { node {Карьера в Москве} }
+            child { node {Наказание} }
+            child { node {Власть} }
+            child { node {Жестокость} }
+            child { node {Человек Слова} }
+        }
+    }
+    ;
+\end{tikzpicture}
+\end{document}

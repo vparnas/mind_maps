@@ -1,0 +1,136 @@
+% Author: Vitaly Parnas
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage[paperheight=13in,paperwidth=13in,margin=1in,heightrounded]{geometry}
+\usepackage{verbatim}
+\graphicspath{ {images/} }
+
+% Below needed for the russian characters
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{comment}
+:Title: Murakami, Norwegian Wood mind map
+:Tags: Manual, Mindmap
+
+| Author: Vitaly Parnas
+| Source: Haruki Murakami - Norwegian Wood
+
+\end{comment}
+
+%\includegraphics[scale=0.40]{image}
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept,
+    concept color=black,text=white,
+    level 1/.append style={level distance=8cm,sibling angle=60,font=\large},
+    level 2/.append style={level distance=3cm,sibling angle=72},
+    level 3/.append style={level distance=2cm,sibling angle=60},
+    level 4/.append style={level distance=2cm,sibling angle=60},
+    nucleus/.style= {concept, font=\huge\bfseries},
+    ]
+    \node [nucleus] {Norwegian Wood}
+    child[concept color=green!50!white,text=black] { node {Ватанабэ}
+        child { node {Универ - Студгород} 
+            child { node {Драматургия} }
+            child { node {Манифестации} }
+            child { node {Совместное Житье} }
+        }
+        child { node {Характер} 
+            child { node {Единственный Сын} }
+            child { node {Литературник} }
+            child { node {Индивидуал} }
+            child { node {Одиночество} }
+        }
+        child { node {Руммэйт - Штурмовик} 
+            child { node {Чистота} }
+            child { node {Зарядка} }
+            child { node {Европейские Плакаты} }
+        }
+    }
+    child[concept color=blue!50!white,text=black] { node {Кидзуки}
+        child { node {Наоко - Любовь} }
+        child { node {Характер} 
+            child { node {Наблюдательный} }
+            child { node {Дар Общения} }
+        }
+        child { node {Покончился} 
+            child { node {После \mbox{Бильярда}} }
+            child { node {В Гараже} }
+        }
+        child { node {Ватанабэ - Магнит} }
+    }
+    child[concept color=red!50!white,text=black] { node {Наоко}
+        child { node {Характер} 
+            child { node {Нестабильность} }
+            child { node {Несовершенство} }
+            child { node {Психическая Болезнь} }
+        }
+        child { node {Семейство} 
+            child { node {Дядя - \mbox{Самоубийство}} }
+            child { node {Сестра - \mbox{Повесилась}} }
+        }
+        child { node {Санаторий} 
+            child { node {В 20 лет}} 
+            child { node {Рэйко}} 
+            child { node {Повесилась}} 
+        }
+    }
+    child[concept color=blue!30!white,text=black] { node {Рэйко}
+        child { node {Привлекательные Морщины} }
+        child { node {Пианино} 
+            child { node {Травма с Детства} }
+            child { node {Любовь} }
+            child { node {13-летняя Студентка} 
+                child { node {Патологически Лгала} }
+                child { node {Спровоцировала на \mbox{Лезбиянство}} }
+                child { node {Очередная \mbox{Травма}} }
+            }
+        }
+        child { node {Санаторий} 
+            child { node {Не первый раз}} 
+            child { node {От 32-39 лет}} 
+            child { node {Помогает Наоко}} 
+            child { node {Игра на Гитаре}} 
+        }
+    }
+    child[concept color=purple!50!white,text=black] { node {Нагасава}
+        child { node {Уважение к \mbox{Ватанабэ}} }
+        child { node {Характер} 
+            child { node {Литературник} }
+            child { node {Бабник} }
+            child { node {Эгоист} }
+            child { node {Стремительный} }
+            child { node {Успех} }
+        }
+        child { node {Хацуми - Подруга} 
+            child { node {Любовь} }
+            child { node {Беспредельная \mbox{Привязанность}} }
+            child { node {Покончилась} }
+        }
+        child { node {Будующий Дипломат} }
+    }
+    child[concept color=yellow!70!white,text=black] { node {Мидори}
+        child { node {Химия с Ватанабэ} }
+        child { node {Характер} 
+            child { node {Чуть Пошлая} }
+            child { node {Анти-модная} }
+            child { node {Короткая Стрижка} }
+        }
+        child { node {Семья} 
+            child { node {Мать Умерла} }
+            child { node {Отец} 
+                child { node {В \mbox{Уругвае} - Лож} }
+                child { node {В \mbox{Больнице}} }
+                child { node {Умер} }
+            }
+            child { node {Сестра в Порядке} }
+        }
+        child { node {Книжный Магазин} }
+    }
+    ;
+\end{tikzpicture}
+\end{document}
